@@ -19,6 +19,7 @@ public class TempServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String one=request.getParameter("one");
+        one=one==null?"":one.replaceAll("<","&lt;").replaceAll(">","&gt;");//defend from XSS
         response.getWriter().write("<html>"+
                 "<head></head>"+
                 "<body>"+
