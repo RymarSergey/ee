@@ -21,7 +21,6 @@ public class CrossSiteScriptingServlet extends HttpServlet {
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
             String one=request.getParameter("one");
-            String two=request.getParameter("two");
             response.getWriter().write("<html>"+
                     "<head></head>"+
                     "<body>"+
